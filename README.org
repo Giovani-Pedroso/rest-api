@@ -1,8 +1,13 @@
 #+title:Rest Api
 
-* curl
+To create a rest api will use the express module 
 
-curl is a commando for test request
+* curl command
+
+
+curl is a commando for test request being them GET, POST, DELETE, PUT
+
+** basic commands
 
 for test a GET reques just use the command with the url of the web site exemple:
 
@@ -14,4 +19,38 @@ to recive with the header add the -i in the command
 
 #+begin_src shell
 curl -i http://localhost:8080/
+#+end_src
+
+To do a POST request add the -d in the commeand then the information as bellow
+
+#+begin_src shell
+curl -d "fisrt=primetiro&secundo=em-pt-br" http://localhost:8080/
+#+end_src
+
+For update the data or PUT  add -X PUT  in the previus command
+
+#+begin_src shell
+curl -X PUT -d "fisrt=primetiro&secundo=em-pt-br" http://localhost:8080/
+#+end_src
+
+to DELETE use this 
+
+#+begin_src shell
+curl -X DELETE "fisrt=primetiro&secundo=em-pt-br" http://localhost:8080/
+#+end_src
+
+
+** Advanced commnads
+
+Some routes of a web site are protect with user and passwords to send this information w use the parametr -u
+ after that the pass the user:password in this formate, exemple:
+
+#+begin_src shell
+curl -u user:password http://localhost:8080/admin
+#+end_src
+
+to download a file use -o then the name of the file,  you can do that for any kind of file like images, json, html
+
+#+begin_src shell
+curl -o image.jjeg http://localhost:8080/a-image
 #+end_src
