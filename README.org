@@ -1,0 +1,17 @@
+#+title:Rest Api
+
+* curl
+
+curl is a commando for test request
+
+for test a GET reques just use the command with the url of the web site exemple:
+
+#+begin_src shell
+curl http://localhost:8080/
+#+end_src
+
+to recive with the header add the -i in the command
+
+#+begin_src shell
+curl -i http://localhost:8080/
+#+end_src
